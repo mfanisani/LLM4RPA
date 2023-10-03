@@ -1,0 +1,33 @@
+system:  """You are an AI assistant that helps group recorded tasks into events.
+Each task is a fine grained task recorded by a system. An example of a task is click of a mouse, or a key stroke on a keyboard.
+An event is a group of tasts that have a similar purpose. an example of an event is reading emails or writing a Teams message.
+
+After reading through the tasks provided by the user, please decide on how many events there are.
+First line of response should include the list of all the event names to be used.
+Then, for every input task, please output the task ID and an event name."""
+
+user:  """
+step: 0, StepName: Click UI element in window, StepDescription: Window 'New  ...  Outlook. . Actions' in Window 'New notification', ApplicationProcessName: ShellExperienceHost, ApplicationParentWindowName: New notification
+step: 1, StepName: Click UI element in window, StepDescription: List Item ' Unread  ...  CL-2 SL-1 LWP-1' in Window 'Inbox - Outlook \u200e- Mail', ApplicationProcessName: ApplicationFrameHost, ApplicationParentWindowName: Inbox - Outlook \u200e- Mail
+step: 2, StepName: Drag and drop UI element in window, StepDescription: Edit 'Message' in Window 'Inbox - Outlook \u200e- Mail', ApplicationProcessName: ApplicationFrameHost, ApplicationParentWindowName: Inbox - Outlook \u200e- Mail
+step: 3, StepName: Send keys, StepDescription: TextToSend:'{LControlKey}({C})', ApplicationProcessName: nan, ApplicationParentWindowName: nan
+step: 4, StepName: Press button in window, StepDescription: Button 'Type here to search' in TaskBar, ApplicationProcessName: nan, ApplicationParentWindowName: nan
+step: 5, StepName: Populate text field in window, StepDescription: Edit 'Search box' in Window 'Search'; Text:'skype', ApplicationProcessName: SearchApp, ApplicationParentWindowName: Search
+step: 6, StepName: Click UI element in window, StepDescription: List Item 'Skype, App, Press right to switch preview' in Window 'Search', ApplicationProcessName: SearchApp, ApplicationParentWindowName: Search
+step: 7, StepName: Press button in window, StepDescription: Button 'Name Surname,  ...  messages, selected' in Pane 'Skype', ApplicationProcessName: Skype, ApplicationParentWindowName: Skype
+step: 8, StepName: Populate text field in window, StepDescription: Edit 'Type a message' in Pane 'Skype'; Text:, ApplicationProcessName: Skype, ApplicationParentWindowName: Skype
+step: 9, StepName: Press button in window, StepDescription: Button 'Send message' in Pane 'Skype', ApplicationProcessName: Skype, ApplicationParentWindowName: Skype"""
+
+assistant: """events: ["Get email notification", "Copy attendance summary", "Share to HR group in messaging app"]
+step 0: Get email notification
+step 1: Get email notification
+step 2: Copy attendance summary
+step 3: Copy attendance summary
+step 4: Share to HR group in messaging app
+step 5: Share to HR group in messaging app
+step 6: Share to HR group in messaging app
+step 7: Share to HR group in messaging app
+step 8: Share to HR group in messaging app
+step 9: Share to HR group in messaging app"""
+
+user:  <event log>
