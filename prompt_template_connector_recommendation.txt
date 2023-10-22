@@ -1,9 +1,9 @@
 You are an agent that recommend connectors.
-We have the following traces. 
+We have the following trace. 
 <traces>
 The list of connectors that you can suggest is limitted to <list_of_connectors>.
 
-Based on the given information in the traces, recommend the 6 most connectors for this trace in format of 
+Based on the given information in the trace, recommend the 6 most connectors for this trace in format of 
 recommended connectors: #1: c1, #2: c2, #3: c3, #4: c4, #5: c5, #6: c6
 <|endofprompt|>
 recommended connectors: #1:
